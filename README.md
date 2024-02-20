@@ -1,4 +1,4 @@
-# calc_ipv4_subnet
+# ipv4_subnet_calc
 **Subnet Calculator**
 ##### *Type: Terminal Application*
 
@@ -14,7 +14,7 @@
 #### **Download**
 - Using CLI, navigate to the folder you wish to download the application and run:
   ```console
-  git clone https://github.com/Node0o1/calc_ipv4_subnet.git
+  git clone https://github.com/Node0o1/ipv4_subnet_calc.git
   ```
 
 #### **Setup**
@@ -27,11 +27,11 @@
     - params=(starting ip, subnetmsk, num of borrowed bits)
     - example: 
       ```py
-      python calc_ipv4_subnet.py 192.168.0.0 255.255.0.0 4
+      python ipv4_subnet_calc.py 192.168.0.0 255.255.0.0 4
       ```
 
   - you may omit the parameters in CLI and be prompted for each param individually.
     - example:
       ```py
-      python calc_ipv4_subnet.py
+      python ipv4_subnet_calc.py
       ```
