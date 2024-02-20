@@ -1,9 +1,11 @@
 # calc_ipv4_subnet
-**subnet calculator**
+**Subnet Calculator**
 ##### *Type: Terminal Application*
 
 #### Description
-> Calculates subnets for a given ip and subnetmask and write the output to a destination txt file.
+> Calculates subnets for a given ip and subnetmask.
+> Populates each created subnets with the subnet address, broadcast address, and list all assignable IP addresses.
+> All output is written and saved in a user specified destination txt file.
 
 ### A few things to note:
 - Python 3 needs to be installed and added to Path
@@ -15,7 +17,7 @@
   git clone https://github.com/Node0o1/calc_ipv4_subnet.git
   ```
 
-#### **setup**
+#### **Setup**
 - after downloading, use the CLI to navigate into the directory
   > No dependancies.
 
