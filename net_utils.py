@@ -67,13 +67,14 @@ def print_subnet_info(address_ranges, ip, custom_subnet_prefix, num_created_subn
         print(f'{type(e).__name__} {e.args}')
     finally:
         try:
-            fhandle.write(f'\nSubnet info for: {ip}/{custom_subnet_prefix}{chr(0x0a)}')
+            fhandle.write(f'Subnet info for: {ip}/{custom_subnet_prefix}{chr(0x0a)}')
             fhandle.write(f'Number of subnets created: {num_created_subnets}{chr(0x0a)}')
             fhandle.write(f'Assignable ip per subnet: {num_assignable_ip}{chr(0x0a)}')
             fhandle.write(f'Subnet block size: {block_size}{chr(0x0a)}')
             fhandle.write('\nCREATED SUBNETS AND ASSIGNABLE IP ADDRESSES:')
             for i in range(len(address_ranges)):
-                fhandle.write('\n======================================================\n')
+                fhandle.write(f'{chr(0x0a)}Subnet #{i+1}{chr(0x0a)}')
+                fhandle.write('======================================================\n')
                 for n in range(len(address_ranges[i])):
                     line=''
                     if(n==0):line+=('Subnet Address - ')
