@@ -19,7 +19,7 @@
 
 #### **Setup**
 - after downloading, use the CLI to navigate into the directory
-  > No dependancies.
+  - No dependancies.
 
 #### **Run**
   - From within the calc_ipv4_subnet directory using CLI:
@@ -31,7 +31,7 @@
       ```
 
   - you may omit the parameters in CLI and be prompted for each param individually.
-    > example:
+    - example:
       ```py
       python calc_ipv4_subnet.py
       ```
