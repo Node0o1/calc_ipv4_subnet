@@ -28,7 +28,7 @@
       python calc_ipv4_subnet.py 192.168.0.0 255.255.0.0 4
       ```
 
-  - YOU MAY OMIT THE PARAMETERS VIA CMD AND WILL BE PROMTED FOR EACH
+  - you may omit the parameters in CLI and be prompted for each param individually.
     > example:
       ```py
       python calc_ipv4_subnet.py
