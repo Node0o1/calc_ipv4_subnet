@@ -35,3 +35,8 @@
       ```py
       python ipv4_subnet_calc.py
       ```
+
+      ![PS CLI COMMAND](https://github.com/Node0o1/ipv4_subnet_calc/assets/157242958/759f7f7b-c4e5-4ccf-b1b5-3c1d31fbcba5)
+      ![RESILTS WRITTEN TO A FILE](https://github.com/Node0o1/ipv4_subnet_calc/assets/157242958/4fa7a3ee-1e9e-4b69-aeaf-ab0597488fca)
+
+
