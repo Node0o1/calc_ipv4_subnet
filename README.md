@@ -6,6 +6,8 @@
 > Calculates subnets for a given ip and subnetmask.
 > Populates each created subnets with the subnet address, broadcast address, and list all assignable IP addresses.
 > All output is written and saved in a user specified destination txt file.
+>
+> Handles Class A, B, C networks.
 
 ### A few things to note:
 - Python 3 needs to be installed and added to Path
