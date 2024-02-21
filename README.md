@@ -23,8 +23,8 @@
 
 #### **Run**
   - From within the calc_ipv4_subnet directory using CLI:
-    - python file.py param1 param2 param3
-    - params=(starting ip, subnetmsk, num of borrowed bits)
+    - python file.py param1 param2 param3 param4
+    - params=(starting ip, subnetmsk, num of borrowed bits, output_file)
     - example: 
       ```py
       python ipv4_subnet_calc.py 192.168.0.0 255.255.0.0 4 ./output_file.txt
