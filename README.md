@@ -27,7 +27,7 @@
     - params=(starting ip, subnetmsk, num of borrowed bits)
     - example: 
       ```py
-      python ipv4_subnet_calc.py 192.168.0.0 255.255.0.0 4
+      python ipv4_subnet_calc.py 192.168.0.0 255.255.0.0 4 ./output_file.txt
       ```
 
   - you may omit the parameters in CLI and be prompted for each param individually.
