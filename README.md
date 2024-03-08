@@ -42,6 +42,7 @@
   <img alt="ps cli command" src="https://github.com/Node0o1/ipv4_subnet_calc/assets/157242958/a00ac145-1ea4-4e62-8f09-a6300a4e76e2"/> 
 </p>
 <p align="center">
-  <img alt="output file contents" src="https://github.com/Node0o1/ipv4_subnet_calc/assets/157242958/4fa7a3ee-1e9e-4b69-aeaf-ab0597488fca"/> 
+  <img alt="output file contents" src="https://github.com/Node0o1/ipv4_subnet_calc/assets/157242958/0fe9acd7-521c-4bd6-8c9e-545de82c42ee">
+"/> 
 </p>
 
