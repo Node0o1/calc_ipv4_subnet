@@ -23,7 +23,7 @@ if __name__=="__main__":
         try:
             ip=str(input('Enter the Network IP Address (192.168.0.0): '))
             subnet=str(input('Enter the Subnet Mask you would like to borrow from (255.255.0.0): '))
-            borrowed_bits=int(input('Enter the number of bits you want to borrow from the Subnet Mask '))
+            borrowed_bits=int(input('Enter the number of bits you want to borrow: '))
             output_file=str(input('Enter the /path/to/filename.txt in which you would like the output to be written. It will be created if not exists.: '))
         except:
             print('Data Entry Error. Be sure to enter the information correctly.')
