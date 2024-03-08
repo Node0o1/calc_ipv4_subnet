@@ -106,4 +106,3 @@ def print_subnet_info(address_ranges, ip, custom_subnet_prefix, new_subnet, num_
             print(f'{type(e).__name__} {e.args}')
         else:
             print(f'{chr(0x0a)}File write to {output_file} successful.{chr(0x0a)}Please review the .txt file for complete information.{chr(0x0a)}')
-            print("")
