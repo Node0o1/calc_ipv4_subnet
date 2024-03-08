@@ -43,6 +43,5 @@
 </p>
 <p align="center">
   <img alt="output file contents" src="https://github.com/Node0o1/ipv4_subnet_calc/assets/157242958/0fe9acd7-521c-4bd6-8c9e-545de82c42ee">
-"/> 
 </p>
 
