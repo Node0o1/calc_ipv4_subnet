@@ -38,13 +38,16 @@
       python ipv4_subnet_calc.py
       ```
 ## **Images**
+- With parameters
 <p align="center">
   <img width="755" alt="Screenshot 2024-03-08 141938" src="https://github.com/Node0o1/ipv4_subnet_calc/assets/157242958/206cee88-0c63-4ef3-b915-17831997da90">
 </p>
-- or
+<br/>
+- Or without parameters
 <p align="center">
   <img width="782" alt="Screenshot 2024-03-08 141519" src="https://github.com/Node0o1/ipv4_subnet_calc/assets/157242958/267694fc-77d2-4a25-a675-d1143337d765">
 </p>
+<br/>
 - file contents:
 <p align="center">
   <img alt="output file contents" src="https://github.com/Node0o1/ipv4_subnet_calc/assets/157242958/0fe9acd7-521c-4bd6-8c9e-545de82c42ee">
