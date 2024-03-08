@@ -5,6 +5,7 @@ def ipv4_subnet_calculator(ip, current_subnet, borrowed_bits, output_file):
     octets = current_subnet.split('.')
     prefix = subnet_utils.get_current_prefix(octets)
     custom_subnet_prefix = prefix+borrowed_bits
+    new_subnet = subnet_utils.resolve_subnet_configuration(custom_subnet_prefix)
     host_bits = 32 - custom_subnet_prefix
     num_created_subnets = subnet_utils.get_num_created_subnets(borrowed_bits)
     num_assignable_ip = subnet_utils.get_num_assignable_ipaddr(host_bits)
@@ -12,7 +13,7 @@ def ipv4_subnet_calculator(ip, current_subnet, borrowed_bits, output_file):
     interesting_octet = subnet_utils.determine_interesting_octet(custom_subnet_prefix)
     block_size = subnet_utils.determine_block_size(interesting_octet, custom_subnet_prefix)
     address_ranges = subnet_utils.populate_subnets(ip, num_created_subnets, total_ip_per_sub)
-    subnet_utils.print_subnet_info(address_ranges, ip, custom_subnet_prefix, num_created_subnets, num_assignable_ip, block_size, output_file)
+    subnet_utils.print_subnet_info(address_ranges, ip, custom_subnet_prefix, new_subnet, num_created_subnets, num_assignable_ip, block_size, output_file)
     
 if __name__=="__main__":
     try:
