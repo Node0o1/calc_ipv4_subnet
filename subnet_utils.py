@@ -86,7 +86,7 @@ def print_subnet_info(address_ranges, ip, custom_subnet_prefix, new_subnet, num_
     finally:
         try:
             fhandle.write(f'Subnet info for: {ip}/{custom_subnet_prefix}{chr(0x0a)}')
-            fhandle.write(f'New Subnet Mask: {new_subnet}')
+            fhandle.write(f'New Subnet Mask: {new_subnet}{chr(0x0a)}')
             fhandle.write(f'Number of subnets created: {num_created_subnets}{chr(0x0a)}')
             fhandle.write(f'Assignable ip per subnet: {num_assignable_ip}{chr(0x0a)}')
             fhandle.write(f'Subnet block size: {block_size}{chr(0x0a)}')
