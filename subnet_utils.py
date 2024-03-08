@@ -54,9 +54,27 @@ def populate_subnets(ip, num_subnets, total_ip_per_sub)->list:
         created_subs_and_ipRange.append(sub_list)
     return created_subs_and_ipRange
 
-def print_subnet_info(address_ranges, ip, custom_subnet_prefix, num_created_subnets, num_assignable_ip, block_size, output_file)->None:
+def resolve_subnet_configuration(working_bits) -> str:
+    block = 8
+    octets = 4
+    subnet_mask_bits=''
+    for n in range(32):
+        if(working_bits == 0):subnet_mask_bits +='0'
+        else:
+            subnet_mask_bits+='1'
+            working_bits-=1
+        if(((n+1) % block == 0) and (not(n == 0 or n == block * octets - 1))):
+            subnet_mask_bits += '.'
+    subnet_mask_octs = subnet_mask_bits.split('.')
+    for n in range(octets):
+        subnet_mask_octs[n] = int(subnet_mask_octs[n], 2)
+    subnet_mask=''.join([str(oct)+'.' for oct in subnet_mask_octs])[:-1]
+    return subnet_mask
+
+def print_subnet_info(address_ranges, ip, custom_subnet_prefix, new_subnet, num_created_subnets, num_assignable_ip, block_size, output_file)->None:
     #print some data to terminal
     print(f'{chr(0x0a)}Subnet info for: {ip}/{custom_subnet_prefix}')
+    print(f'New Subnet Mask: {new_subnet}')
     print(f'Number of subnets created: {num_created_subnets}')
     print(f'Assignable ip per subnet: {num_assignable_ip}')
     print(f'Subnet block size: {block_size}')
@@ -68,13 +86,14 @@ def print_subnet_info(address_ranges, ip, custom_subnet_prefix, num_created_subn
     finally:
         try:
             fhandle.write(f'Subnet info for: {ip}/{custom_subnet_prefix}{chr(0x0a)}')
+            fhandle.write(f'New Subnet Mask: {new_subnet}')
             fhandle.write(f'Number of subnets created: {num_created_subnets}{chr(0x0a)}')
             fhandle.write(f'Assignable ip per subnet: {num_assignable_ip}{chr(0x0a)}')
             fhandle.write(f'Subnet block size: {block_size}{chr(0x0a)}')
-            fhandle.write('\nCREATED SUBNETS AND ASSIGNABLE IP ADDRESSES:')
+            fhandle.write('\nCREATED SUBNETS AND ASSIGNABLE IP ADDRESSES:\n')
             for i in range(len(address_ranges)):
-                fhandle.write(f'{chr(0x0a)}Subnet #{i+1}{chr(0x0a)}')
-                fhandle.write('======================================================\n')
+                fhandle.write(f'{chr(0x0a)}Subnet #{i+1}')
+                fhandle.write('\n======================================================\n')
                 for n in range(len(address_ranges[i])):
                     line=''
                     if(n==0):line+=('Subnet Address - ')
@@ -86,4 +105,5 @@ def print_subnet_info(address_ranges, ip, custom_subnet_prefix, num_created_subn
         except Exception as e:
             print(f'{type(e).__name__} {e.args}')
         else:
-            print(f'File write to {output_file} successful.{chr(0x0a)}')
+            print(f'{chr(0x0a)}File write to {output_file} successful.{chr(0x0a)}Please review the .txt file for complete information.{chr(0x0a)}')
+            print("")
